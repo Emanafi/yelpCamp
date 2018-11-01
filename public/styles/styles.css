@@ -1,0 +1,37 @@
+nav {
+	border: 2px solid red;
+	max-width: 100vh;
+	height: 3vh;
+
+}
+
+.nav-links {
+	float: right;    
+	display: inline-block;
+    vertical-align: middle;
+    line-height: 3.5em;
+	padding-right: 2em;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 3.5em;
+    padding-left: 2em;
+}
+
+.nav-links span {
+	padding: 10px;
+}
+
+main {
+	border: 2px solid blue;
+	max-width: 100vh;
+	height: 75vh;
+}
+
+footer {
+	border: 2px solid cyan;
+	max-width: 100vh;
+	height: 25vh;
+}

@@ -30,7 +30,7 @@ app.use(express.static('public'));
 
 // HTML Endpoints
 app.get('/', (req, res) => {
-	res.sendFile(__dirNname + 'views/landingpage.html');
+	res.sendFile(__dirNname + 'views/index.html');
 })
 
 
