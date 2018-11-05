@@ -93,3 +93,15 @@ footer {
 	/*height: 25%;*/
 	height: 250px;
 }
+
+.social-media-links {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 2em;
+	/*float: right;*/
+	padding: .4em;
+}
+
+.social-media-links p {
+	padding: .5em;
+}
