@@ -3,6 +3,8 @@ const app = express();
 
 //parse incoming url encoded form data
 //and populate the req.body object
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.json());
 
@@ -30,7 +32,7 @@ app.use(express.static('public'));
 
 // HTML Endpoints
 app.get('/', (req, res) => {
-	res.sendFile(__dirNname + 'views/index.html');
+	res.sendFile(__dirname + '/views/index.html');
 })
 
 
