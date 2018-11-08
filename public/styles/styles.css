@@ -31,7 +31,7 @@ main {
 }
 
 .search-option {
-	background-image: url('../../images/search-option-imageBG.png');
+	background-image: url('../images/search-option-imageBG.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -90,14 +90,24 @@ main {
 	height: 730px;
 }
 
-.about-us-container {
+.middle-portion {
 	text-align: center;
+	border: 2px solid orange;
 } 
 
 .right-portion {
 	border: 2px solid purple;
 	width: 80%;
 	height: 730px;
+}
+
+.parallax-image1 {
+	background-image: url("../images/camp2.jpeg");
+	height: 100vh;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 footer {
