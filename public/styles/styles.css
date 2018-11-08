@@ -49,11 +49,12 @@ main {
 #filter-submit {
     position: relative;
     z-index: 1;
-    left: -25px;
-    top: 1px;
+    font-size: 1.2em;
+    left: -40px;
     color: #7B7B7B;
-    cursor:pointer;
+    cursor: pointer;
     width: 0;
+    border: none;
 }
 
 .search-option{
@@ -63,7 +64,7 @@ main {
 
 .tag-line {
 	color: white;
-	margin: 0 auto;
+	margin: 5px auto;
 	font-size: 2em;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 25%;
