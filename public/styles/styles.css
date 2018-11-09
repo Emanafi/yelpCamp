@@ -44,6 +44,7 @@ main {
 	padding: .3em;
 	font-size: 1.5em;
 	margin-top: 5em;
+	box-shadow: 3px 3px 15px #888888;
 }
 
 #filter-submit {
@@ -103,12 +104,50 @@ main {
 }
 
 .parallax-image1 {
-	background-image: url("../images/camp2.jpeg");
-	height: 100vh;
+	background-image: url("../images/camp1.jpeg");
+	height: 50vh;
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax-image2 {
+	background-image: url("../images/camp2.jpeg");
+	height: 50vh;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.steps {
+	border: 2px solid black;
+	display: flex;
+	justify-content: space-around;
+	font-size: 3em;
+	text-align: center;
+}
+
+.left-step, .middle-step, .right-step {
+	/*border: 2px solid gray;*/
+	padding: 3em 0;
+	margin: 0;
+}
+
+.steps-description {
+	font-size: .6em;
+	max-width: 80%;
+}
+
+.steps p {
+	margin: 10px auto;
+}
+
+.left-step button {
+	font-size: .5em;
+	border-radius: 1em;
+	outline: none;
 }
 
 footer {
