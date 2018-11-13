@@ -39,7 +39,7 @@ main {
 	height: 60vh;
 }
 
-.search {
+#search {
 	width: 40%;
 	padding: .3em;
 	font-size: 1.5em;
