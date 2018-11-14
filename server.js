@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const ejs = require('ejs');
 
 //parse incoming url encoded form data
 //and populate the req.body object
@@ -17,10 +18,34 @@ app.use( (req, res, next) => {
 });
 
 /**************
-*   DATABASE  *
-***************/
-const db = require('./models/index.js');
-
+*   DATABASE. *
+**************/
+	let campgrounds = [
+		{
+			name: 'Salmon Creek', 
+			image: '/images/camp5.jpeg'
+		},
+		{
+			name: 'Granite Hill',
+			image: '/images/camp6.jpeg'
+		},
+		{
+			name: 'Mountain Goats Rest',
+			image: '/images/camp7.jpeg'
+		},
+		{
+			name: 'Salmon Creek', 
+			image: '/images/camp5.jpeg'
+		},
+		{
+			name: 'Granite Hill',
+			image: '/images/camp6.jpeg'
+		},
+		{
+			name: 'Mountain Goats Rest',
+			image: '/images/camp7.jpeg'
+		}
+	]
 
 /**************
 *    ROUTES   *
@@ -35,7 +60,29 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/views/index.html');
 })
 
+app.get('/campgrounds', (req, res) => {
+	res.render(__dirname + '/views/campgrounds.ejs', {campgrounds:campgrounds});
+});
+
+app.get('/landing', (req, res) => {
+	res.render(__dirname + '/views/landing.ejs');
+});
+
+app.post("/campgrounds", (req, res) => {
+	//get data from form and add to campgrounds array
+	let name = req.body.name;
+	let image = req.body.image;
+	let newCampground = {name: name, image: image}
+	campgrounds.push(newCampground);
+	//redirect back to campgrounds page
+	res.redirect('/campgrounds');
+});
+
+app.get('/campgrounds/new', (req, res) => {
+	res.render('new.ejs');
+})
+
 
 app.listen(3000, ()=> {
 	console.log('The YelpCamp server has started!');
-})
+});

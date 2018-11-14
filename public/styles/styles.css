@@ -144,7 +144,7 @@ main {
 	margin: 10px auto;
 }
 
-.left-step button {
+.left-step button, .middle-step button {
 	font-size: .5em;
 	border-radius: 1em;
 	outline: none;
